@@ -59,4 +59,4 @@ Open up [http://127.0.0.1:8787](http://127.0.0.1:8787) and you should be ready t
 
 ## Deployment
 
-Deployment is handled by the GH Action set up for this repository, which uses wrangler. If you fork it, make sure to create an actions secret for CF_API_TOKEN where you can just chuck a workers API token in.
+Deployment is handled by the GH Action set up for this repository, which uses wrangler. If you fork it, make sure to create an actions secret for `CF_API_TOKEN` where you can just chuck a workers API token in.
