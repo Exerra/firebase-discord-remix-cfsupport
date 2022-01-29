@@ -1,0 +1,23 @@
+name: Deploy to CF Workers
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy
+
+    if: "contains(github.event.head_commit.message, '[deploy]')" # If the commit title contains "[deploy]" then proceed
+
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: yarn install --frozen-lockfile
+      - run: npm run build
+      - name: Publish
+        uses: cloudflare/wrangler-action@1.3.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
