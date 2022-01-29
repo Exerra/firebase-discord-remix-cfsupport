@@ -10,7 +10,7 @@ When trying to add environment variables thru the Worker dashboard for this proj
 As you can see, this project is using [Remix](https://remix.run) and was created with the CF Workers preset in the `npx create-remix@latest` command.
 Everything except `./app`, `./wrangler.toml` and `./package*.json` is in its original state from the npx command.
 
-If I use wrangler for the env vars, it gets set, and I can see it in the dashboard.
+If I use wrangler (1.19.5) for the env vars, it gets set, and I can see it in the dashboard.
 
 Also, I can only replicate this issue on this project, all the other Remix projects I have work flawlessly.
 
